@@ -106,7 +106,7 @@ def generate(state):
 
     """
     state["retry_count"] = state.get("retry_count", 0) + 1
-    print(f"retry_count: {state["retry_count"]}")
+    print(f'''retry_count: {state["retry_count"]}''')
     if state["retry_count"] > 4:
         print("---DECISION: QUÁ SỐ LẦN THỬ, CHUYỂN SANG TÌM KIẾM TRÊN WEB---")
         state["route"] = "reach_limit"
@@ -185,7 +185,7 @@ def transform_query(state):
         state (dict): Cập nhật khóa "question" với câu hỏi đã được diễn đạt lại
     """
     state["retry_count"] = state.get("retry_count", 0) + 1
-    print(f"retry_count: {state["retry_count"]}")
+    print(f'''retry_count: {state["retry_count"]}''')
     if state["retry_count"] > 5:
         print("---DECISION: QUÁ SỐ LẦN THỬ, CHUYỂN SANG TÌM KIẾM TRÊN WEB---")
         state["route"] = "reach_limit"
