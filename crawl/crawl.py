@@ -27,10 +27,6 @@ class URL:
         options.add_argument('--window-size=1920,1080')            # ổn định layout khi headless
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-        # ✅ Tự động tải đúng ChromeDriver khớp version Chrome
-        # Thử dùng webdriver-manager; nếu không có mạng hoặc tên miền bị chặn,
-        # fallback sang driver cục bộ được chỉ định bằng biến môi trường CHROME_DRIVER_PATH
-        # hoặc tìm trên PATH (chromedriver.exe / chromedriver)
         driver = None
         try:
             driver_path = ChromeDriverManager().install()
