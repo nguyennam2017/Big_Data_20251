@@ -7,6 +7,7 @@ from models.adaptive_rag.main_arag import adaptive_rag_graph as compiled_app, Gr
 from models.manual_query.manual_search import search
        
 # Configure logging
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
